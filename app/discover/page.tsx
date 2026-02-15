@@ -3,7 +3,6 @@
 import { useMemo, useState } from "react";
 
 type IntentMode = "now" | "later";
-
 type Profile = {
   id: string;
   name: string;
@@ -36,13 +35,11 @@ function Pill({ active, onClick, children }: { active: boolean; onClick: () => v
 
 export default function DiscoverPage() {
   const [intent, setIntent] = useState<IntentMode>("now");
-
   const profiles = useMemo(() => MOCK.filter(p => p.intent === intent), [intent]);
 
   return (
     <div className="min-h-screen bg-neutral-50">
       <div className="mx-auto max-w-6xl px-4 py-6">
-        {/* Top bar */}
         <div className="flex items-center justify-between gap-4">
           <div className="text-lg font-semibold tracking-tight">Gayze</div>
           <div className="flex gap-2">
@@ -51,7 +48,6 @@ export default function DiscoverPage() {
           </div>
         </div>
 
-        {/* Grid */}
         <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
           {profiles.map((p) => (
             <a
@@ -78,7 +74,7 @@ export default function DiscoverPage() {
         </div>
 
         <div className="mt-4 text-xs text-black/50">
-          Grid is browse-only. Tap a profile to choose Spicy/Social actions and Like with intent.
+          Tap a profile to choose Spicy/Social actions and Like with intent.
         </div>
       </div>
     </div>
