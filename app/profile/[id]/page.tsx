@@ -1,4 +1,6 @@
 "use client";
+const [mode, setMode] = useState<"spicy" | "social">("spicy");
+const [action, setAction] = useState<string | null>(null);
 
 export default function ProfilePage() {
   return (
