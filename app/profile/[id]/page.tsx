@@ -1,3 +1,5 @@
+"use client";
+
 export default function ProfilePage() {
   return (
     <div className="min-h-screen bg-neutral-50 p-6">
